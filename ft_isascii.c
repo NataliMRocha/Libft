@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:44:20 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/17 18:47:51 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/07/18 14:24:53 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (TRUE);
+		return (1);
 	else
-		return (FALSE);
+		return (0);
 }

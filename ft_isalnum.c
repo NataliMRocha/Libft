@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:06:26 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/17 16:43:41 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:59:37 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isalnum(int c)
 {
-	if ((ft_isalpha(c) || ft_isdigit(c)) >= 1)
-		return (TRUE);
+	if ((ft_isalpha(c) >= 1) || (ft_isdigit(c) >= 1))
+		return (1);
 	else
-		return (FALSE);
+		return (0);
 }

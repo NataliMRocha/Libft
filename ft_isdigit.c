@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 15:51:55 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/17 16:43:15 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:58:31 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
-		return (TRUE);
+	if (c >= '0' && c <= '9')
+		return (1);
 	else
-		return (FALSE);
+		return (0);
 }

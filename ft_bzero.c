@@ -6,23 +6,20 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:41:10 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/17 20:05:27 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/07/21 19:02:34 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
-	uint8_t			*b;
+	char	*c;
 
-	i = 0;
-	b = (char *) s;
-	while (i < n)
+	c = s;
+	while (n-- > 0)
 	{
-		b[i] = '\0';
-		i++;
+		*c = '\0';
+		c++;
 	}
-	return ;
 }
