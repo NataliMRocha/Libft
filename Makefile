@@ -23,6 +23,8 @@ SRC = 	ft_bzero.c \
 		ft_toupper.c \
 		ft_strnstr.c \
 		ft_atoi.c \
+		ft_calloc.c \
+		ft_strdup.c \
 
 OBJECTS = $(SRC:%.c=%.o)
 RM = rm -f
