@@ -1,6 +1,4 @@
 NAME = libft.a
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
 SRC = 	ft_bzero.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -25,8 +23,15 @@ SRC = 	ft_bzero.c \
 		ft_atoi.c \
 		ft_calloc.c \
 		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+
+	
 
 OBJECTS = $(SRC:%.c=%.o)
+
 RM = rm -f
 
 all: $(NAME)
@@ -36,6 +41,7 @@ $(NAME): $(OBJECTS)
 
 clean:
 	$(RM) $(OBJECTS)
+
 fclean: clean
 	$(RM) $(NAME)
 
