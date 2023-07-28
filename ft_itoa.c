@@ -1,45 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 20:37:01 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/27 17:08:48 by namoreir         ###   ########.fr       */
+/*   Created: 2023/07/26 18:42:56 by namoreir          #+#    #+#             */
+/*   Updated: 2023/07/27 17:18:34 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_check_char(char c, char const *set)
+static size_t	ft_count_digit(long int n)
 {
-	while (*set)
+	size_t	len;
+
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n)
 	{
-		if (*set == c)
-			return (1);
-		set++;
+		n /= 10;
+		len++;
 	}
-	return (0);
+	return (len);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_itoa(int n)
 {
-	size_t		start;
-	size_t		end;
 	char		*str;
+	size_t		int_size;
+	size_t		index;
+	long int	nb;
 
-	if (!set || !s1)
-		return (NULL);
-	start = 0;
-	while (s1[start] && ft_check_char(s1[start], set))
-		start++;
-	end = ft_strlen(s1);
-	while (end > start && ft_check_char(s1[end - 1], set))
-		end--;
-	str = (char *)malloc(end - start + 1 * sizeof(char));
+	nb = n;
+	int_size = ft_count_digit(n);
+	str = (char *)ft_calloc((int_size + 1), sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	ft_strlcpy(str, (s1 + start), end - start + 1);
+	index = int_size - 1;
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb *= -1;
+	}
+	if (nb == 0)
+		str[0] = '0';
+	while (nb > 0)
+	{
+		str[index--] = (nb % 10) + '0';
+		nb /= 10;
+	}
 	return (str);
 }

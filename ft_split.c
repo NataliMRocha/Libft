@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 11:34:36 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/26 13:17:06 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/07/27 17:09:31 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static size_t	count_words(char const *s, char c)
 	return (words);
 }
 
-static size_t	ft_word_len(char *str, char c, size_t start)
+static size_t	ft_word_len(char const *str, char c, size_t start)
 {
 	size_t	w_len;
 

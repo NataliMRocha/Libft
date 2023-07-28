@@ -1,4 +1,7 @@
 NAME = libft.a
+CC = cc
+FLAGS = -Wall -Wextra -Werror
+
 SRC = 	ft_bzero.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -27,20 +30,30 @@ SRC = 	ft_bzero.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
-
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 	
-
 OBJECTS = $(SRC:%.c=%.o)
+
+INCLUDES = 	libft.h
 
 RM = rm -f
 
+.c.o:
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+
+$(NAME): $(OBJECTS) $(INCLUDES)
+	ar -rcs $(NAME) $(OBJECTS) $(INCLUDES)
+
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	ar -rcs $(NAME) $(OBJECTS)
-
 clean:
-	$(RM) $(OBJECTS)
+	$(RM) *.o
 
 fclean: clean
 	$(RM) $(NAME)

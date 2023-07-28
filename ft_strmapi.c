@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/22 19:29:15 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/27 12:33:11 by namoreir         ###   ########.fr       */
+/*   Created: 2023/07/27 12:14:34 by namoreir          #+#    #+#             */
+/*   Updated: 2023/07/27 15:00:22 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	void	*alloc_mem;
-	size_t	total_size;
+	int		i;
+	char	*new_str;
+	int		len;
 
-	if (nmemb == 0 || size == 0)
-		return (malloc(sizeof(char) * 1));
-	total_size = nmemb * size;
-	alloc_mem = malloc(total_size);
-	if (alloc_mem == NULL)
+	if (!s || !f)
 		return (NULL);
-	ft_bzero(alloc_mem, total_size);
-	return (alloc_mem);
+	len = ft_strlen(s);
+	new_str = (char *)malloc(len + 1);
+	if (!new_str)
+		return (NULL);
+	new_str[len] = '\0';
+	i = 0;
+	while (i < len)
+	{
+		new_str[i] = (*f)(i, s[i]);
+		i++;
+	}
+	return (new_str);
 }

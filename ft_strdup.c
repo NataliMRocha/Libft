@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 20:21:27 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/22 20:41:39 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/07/27 12:20:56 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ char	*ft_strdup(const char *s)
 {
 	size_t	i;
 	size_t	len;
-	char	*strcp;
+	char	*strdup;
 
 	len = ft_strlen(s);
-	i = 0;
-	strcp = (char *)malloc(sizeof(char) * (len + 1));
-	if (strcp == NULL)
+	strdup = (char *)ft_calloc((len + 1), sizeof(char));
+	if (strdup == NULL)
 		return (NULL);
+	i = 0;
 	while (i < len + 1)
 	{
-		strcp[i] = s[i];
+		strdup[i] = s[i];
 		i++;
 	}
-	return (strcp);
+	return (strdup);
 }
