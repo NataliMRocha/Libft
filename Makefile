@@ -47,10 +47,10 @@ RM = rm -f
 .c.o:
 	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
+all: $(NAME)
+
 $(NAME): $(OBJECTS) $(INCLUDES)
 	ar -rcs $(NAME) $(OBJECTS) $(INCLUDES)
-
-all: $(NAME)
 
 clean:
 	$(RM) *.o
