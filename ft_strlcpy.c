@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:34:42 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/25 14:26:48 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/07/28 16:19:34 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (size == 0)
 		return (ft_strlen(src));
