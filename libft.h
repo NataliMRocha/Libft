@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:11:17 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/28 17:03:35 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/03 12:25:47 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 /**@brief Check if the int 'c' is an alphabetical character
  * from the ASCII table.
@@ -279,5 +285,38 @@ void	ft_putendl_fd(char *s, int fd);
  * @return
 */
 void	ft_putnbr_fd(int n, int fd);
+
+// ----------Bonus functions----------
+
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+
+/**@brief Iterates the list 'lst' and applies the function
+'f' on the content of each node.
+
+ * @param lst the address of a pointer to a node.
+ * @param f the address of the function used to iterate on
+the list.
+*/
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+/**@brief Iterates the list 'lst' and applies the function
+'f' on the content of each node. Creates a new
+list resulting of the successive applications of
+the function 'f'. The 'del' function is used to
+delete the content of a node if needed.
+
+ * @param lst the address of a pointer to a node.
+ * @param f  the address of the function used to iterate on
+the list.
+ * @param del the address of the function used to delete
+the content of a node if needed.
+ * @return The new list. NULL if the allocation fails.
+*/
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
