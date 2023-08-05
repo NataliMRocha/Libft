@@ -10,41 +10,41 @@ Upon completing the mandatory part of the project, you are encouraged to do the 
 
 | Function | Description |
 | :------: | :---------: |
-| ``ft_atoi`` | Reads a String, and, after ignoring spaces with ``ft_isspace``, saves the string into an integer |
-| ``ft_bzero`` | Writes ``n`` zeroes to the string ``s`` |
-| ``ft_calloc`` | Reserves ``x`` blocks of ``y`` bits of memory |
-| ``ft_isalnum`` | Returns ``1`` if the input is a number or a letter in the ``ASCII`` table |
-| ``ft_isalpha`` | Returns ``1`` if the input is a letter in the ``ASCII`` table |
-| ``ft_isascii`` | Returns whether or not a value belongs to the ``ASCII`` table |
-| ``ft_isdigit`` | Returns ``1`` if the input is a number in the ``ASCII`` table |
-| ``ft_isprint`` | Returns whether a character is printable |
-| ``ft_itoa`` | Saves the given number as a string (char array) |
+| ``ft_atoi`` | Converts the initial portion of the string pointed to by ``nptr`` to int |
+| ``ft_bzero`` | Sets the first ``n`` chars of a string ``s`` to zero ``\0`` |
+| ``ft_calloc`` | Allocates memory for an array of 'nmemb' elements of 'size' bytes, and set to zero. If 'nmemb' or 'size' is 0, then calloc returns either NULL, or a unique pointer value that can later be successfully passed to free. |
+| ``ft_isalnum`` | Returns ``1`` if the input is a alphanumeric character from the ``ASCII`` table |
+| ``ft_isalpha`` | Returns ``1`` if the input is a alphabetical character from the ``ASCII`` table |
+| ``ft_isascii`` | Returns ``1`` if the input is in the ``ASCII`` table |
+| ``ft_isdigit`` | Returns ``1`` if the input is a digit character from the ``ASCII`` table |
+| ``ft_isprint`` | Returns ``1`` if the input is a printable character from the ``ASCII`` table |
+| ``ft_itoa`` | Allocates with malloc and returns a string representing the integer received as an argument, negative numbers must be handled |
 | ``ft_memccpy`` | Copies from one memory point to another, until the specified character is copied or until ``n`` bytes are copied |
-| ``ft_memchr`` | Looks for a matching character inside a part of the memory |
-| ``ft_memcmp`` | Compares two parts of memory, returning ``0`` if they're the same, or else a nonzero value |
-| ``ft_memcpy`` | Copies from one part of memory to another, ignoring possible overlaps |
-| ``ft_memmove`` | Copies from one part of memory to another, preventing possible overlaps |
-| ``ft_memset`` | Assigns a character ``n`` times to a part of the memory |
+| ``ft_memchr`` | Scans the initial ``n`` bytes of the memory area pointed to by ``s`` for the first instance of ``c`` |
+| ``ft_memcmp`` | Compares the first ``n`` bytes, each interpreted as unsigned char, of the memory areas ``s1`` and ``s2`` |
+| ``ft_memcpy`` | Copies ``n`` bytes from memory area ``src`` to memory area ``dest``, the memory areas must not overlap. |
+| ``ft_memmove`` | Copies ``n`` bytes from memory area ``src`` to memory area ``dest`` n case of memory overlap, ``src`` will be copied to a temporary array and then to ``dst`` |
+| ``ft_memset`` | Fills the first ``n`` bytes of the memory area pointed to by ``s`` with the int ``c`` |
 | ``ft_putchar_fd`` | Prints a character to the given file descriptor |
 | ``ft_putendl_fd`` | Prints a string followed by a new line ``\n`` to a given file descriptor |
 | ``ft_putnbr_fd`` | Prints number to the given file descriptor |
 | ``ft_putstr_fd`` | Prints string to the given file descriptor |
-| ``ft_split`` | Splits a string according to a given separator character |
-| ``ft_strchr`` | Looks for a specific character inside a given string |
-| ``ft_strdup`` | Saves enoug space and duplicates a string |
+| ``ft_split`` | Allocates with malloc and returns an array of strings obtained by splitting ``s`` using the character ``c`` as a delimiter. The array must end with a NULL pointer |
+| ``ft_strchr`` | Looks for the first occurrence of the character ``c`` in the string ``s`` |
+| ``ft_strdup`` | Allocates with malloc and duplicate the contents of string ``s``|
 | ``ft_striteri`` | Applies a function on each character of the string passed as argument |
-| ``ft_strjoin`` | Concatenates two strings allocating enough space first |
-| ``ft_strlcat`` | Concatenates two strings ensuring it ends with ``\0`` |
-| ``ft_strlcpy`` | Copies ``n - 1`` bytes from a source string to a destination string |
-| ``ft_strlen`` | Returns length of a string |
+| ``ft_strjoin`` | Allocates with malloc and returns a new string, which is the result of the concatenation of ``s1`` and ``s2`` |
+| ``ft_strlcat`` | Appends the NUL-terminated string ``src`` to the end of ``dst``. It will append at most ``size - strlen(dst) - 1`` bytes NUL-terminating the result.|
+| ``ft_strlcpy`` | Copies ``size - 1`` characters from the NUL-terminated string ``src`` to ``dst``, NUL-terminating the result |
+| ``ft_strlen`` | Returns the length of the string, before the terminating null byte ('\0') can be found |
 | ``ft_strmapi`` | Applies a function (mapping) to every element in a string |
-| ``ft_strncmp`` | Compares two strings up to the n-th character |
-| ``ft_strnstr`` | Tries to find a substring (``needle``) in a second string (``haystack``) before the n-th char is reached |
-| ``ft_strrchr`` | Looks for a given character in a string, reading it from back to front |
-| ``ft_strtrim`` | Removes occurrences of characters in a string from the start and end of another one |
-| ``ft_substr`` | Copies from the n-th char of a string |
-| ``ft_tolower`` | Makes every uppercase character in a string lowercase |
-| ``ft_toupper`` | Makes every lowercase character in a string uppercase |
+| ``ft_strncmp`` | Compares only the first (at most) n bytes of two strings, ``s1`` and ``s2`` |
+| ``ft_strnstr`` | Locates the first occurrence of the null-terminated string ``little`` in the string ``big``, where not more than len characters are searched. Characters that appear after a ``\0`` character are not searched |
+| ``ft_strrchr`` | Looks for the last occurrence of the character ``c`` in the string ``s`` |
+| ``ft_strtrim`` | Allocates with malloc and returns a copy of ``s1`` with the characters specified in ``set`` removed from the beginning and the end of the string |
+| ``ft_substr`` | Allocates with malloc and returns a substring from the string ``s``. The substring begins at index ``start`` and is of maximum size ``len`` |
+| ``ft_tolower`` | Convert uppercase letters to lowercase |
+| ``ft_toupper`` | Convert lowercase letters to uppercase |
 
 ## :star: Bonus
 For this part we implemented a struct defining the well-known linked lists
