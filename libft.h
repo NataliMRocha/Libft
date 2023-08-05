@@ -334,7 +334,7 @@ followed by a newline.
 */
 void	ft_putendl_fd(char *s, int fd);
 
-/**@brief Outputs the integer ’n’ to the given file descriptor.
+/**@brief Outputs the integer 'n' to the given file descriptor.
  * 
  * @param n the integer to output
  * @param fd the file descriptor on which to write
@@ -407,6 +407,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 the list.
 */
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+
 /**@brief Iterates the list 'lst' and applies the function
 'f' on the content of each node. Creates a new
 list resulting of the successive applications of
