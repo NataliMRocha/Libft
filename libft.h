@@ -37,7 +37,7 @@ int		ft_isalpha(int c);
 */
 int		ft_isdigit(int c);
 
-/**@brief Checks if the int 'c' is a alphanumeric character.
+/**@brief Checks if the int 'c' is a alphanumeric character from the ASCII table.
  * 
  * @param c a int
  * @return Int '1' for true or int '0' for false.
@@ -116,7 +116,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 /**@brief Appends the NUL-terminated string 'src' to the end of 'dst'.
- * It will append at most size - strlen(dst) - 1 bytes, 
+ * It will append at most ('size' - 'strlen(dst)' - 1 bytes), 
  * NUL-terminating the result.
  * 
  * @param dst destination string to received the copy of 'src'
@@ -202,7 +202,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /**@brief Locates the first occurrence of the null-terminated string
  * little in the string big, where not more than len characters
- * are searched. Characters that appear after a ‘\0’ character are not
+ * are searched. Characters that appear after a '\0' character are not
  * searched.
  * 
  * @param big a string to be searched through
@@ -234,7 +234,7 @@ int		ft_atoi(const char *nptr);
 */
 void	*ft_calloc(size_t nmemb, size_t size);
 
-/**@brief duplicate the contents of string 's'. Memory for the
+/**@brief Duplicate the contents of string 's'. Memory for the
  * new string is obtained with malloc.
  * 
  * @param s a string
@@ -245,7 +245,7 @@ char	*ft_strdup(const char *s);
 
 /**@brief Allocates (with malloc(3)) and returns a substring
  * from the string 's'. The substring begins at index 'start'
- * and is of maximum size ’len’.
+ * and is of maximum size 'len'.
  * 
  * @param s the string from which to create the substring
  * @param start the start index of the substring in the string 's'
