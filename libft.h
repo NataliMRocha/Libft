@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:11:17 by namoreir          #+#    #+#             */
-/*   Updated: 2023/08/03 18:27:09 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/07 19:06:29 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -341,7 +341,7 @@ void	ft_putendl_fd(char *s, int fd);
 */
 void	ft_putnbr_fd(int n, int fd);
 
-// ------------Bonus functions------------
+// ----------------Bonus functions----------------
 
 /**@brief Allocates (with malloc(3)) and returns a new node.
  * The member variable 'content' is initialized with the value of the
