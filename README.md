@@ -68,8 +68,7 @@ Bonus functions to implement
 | ``ft_lstdelone`` | Takes as a parameter a node and frees the memory of the node’s content. The memory of ``next`` must not be freed. |
 | ``ft_lstclear`` | Deletes and frees the given node and every successor of that node and set the pointer to the list with NULL. |
 | ``ft_lstiter`` | Iterates the list ``lst`` and applies the function ``f`` on the content of each node. |
-| ``ft_lstmap`` | Creates a new list resulting of the successive applications of the function ``f``. The ``del`` function is used to
-delete the content of a node if needed. |
+| ``ft_lstmap`` | Creates a new list resulting of the successive applications of the function ``f``. Use ``del`` if you need to delete the content. |
 
 ## 🛠️ Usage
 
