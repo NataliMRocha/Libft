@@ -1,4 +1,3 @@
-
 SRC = 	ft_bzero.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -59,13 +58,17 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-
-bonus: $(OBJECTS_B)
+$(NAME): $(OBJECTS) $(INCLUDES)
+	ar -rcs $(NAME) $(OBJECTS)
 
 %.o:%.c
 	${CC} ${FLAGS} -c $< -o $@
-	ar -rcs $(NAME) $@
+
+bonus: $(OBJECTS_B) $(INCLUDES)
+	ar -rcs $(NAME) $(OBJECTS_B)
+
+%.o:%.c
+	${CC} ${FLAGS} -c $< -o $@
 
 clean:
 	$(RM) $(OBJECTS) $(OBJECTS_B)
