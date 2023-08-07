@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:11:17 by namoreir          #+#    #+#             */
-/*   Updated: 2023/08/07 19:06:29 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/07 19:08:16 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ int		ft_isalpha(int c);
 */
 int		ft_isdigit(int c);
 
-/**@brief Checks if the int 'c' is a alphanumeric character from the ASCII table.
+/**@brief Checks if the int 'c' is a alphanumeric character
+ * from the ASCII table.
  * 
  * @param c a int
  * @return Int '1' for true or int '0' for false.
