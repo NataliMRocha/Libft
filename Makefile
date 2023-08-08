@@ -1,3 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/08/08 19:54:46 by namoreir          #+#    #+#              #
+#    Updated: 2023/08/08 19:57:05 by namoreir         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = libft.a
+
 SRC = 	ft_bzero.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -44,8 +58,8 @@ SRC_B = 	ft_lstnew_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c \
 
-NAME = libft.a
 CC = cc
+
 FLAGS = -Wall -Wextra -Werror
 
 OBJECTS = $(SRC:%.c=%.o)
@@ -58,17 +72,13 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) $(INCLUDES)
-	ar -rcs $(NAME) $(OBJECTS)
+$(NAME): $(OBJECTS)
 
-%.o:%.c
+bonus: $(OBJECTS_B)
+
+%.o:%.c $(INCLUDES)
 	${CC} ${FLAGS} -c $< -o $@
-
-bonus: $(OBJECTS_B) $(INCLUDES)
-	ar -rcs $(NAME) $(OBJECTS_B)
-
-%.o:%.c
-	${CC} ${FLAGS} -c $< -o $@
+	ar -rcs $(NAME) $@
 
 clean:
 	$(RM) $(OBJECTS) $(OBJECTS_B)
