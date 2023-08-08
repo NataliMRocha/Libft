@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 13:19:01 by namoreir          #+#    #+#             */
-/*   Updated: 2023/08/08 17:17:53 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/08 19:41:51 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	new = (t_list *)ft_calloc(1, sizeof(t_list));
+	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
-	new->content = content; 
+	new->content = content;
 	new->next = NULL;
 	return (new);
 }
