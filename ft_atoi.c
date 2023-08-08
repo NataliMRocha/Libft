@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 16:05:31 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/27 14:54:47 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/08 19:43:27 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	int		sign;	
+	int		sign;
 	int		result;
 
 	i = 0;
