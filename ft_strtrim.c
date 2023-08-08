@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 20:37:01 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/27 17:08:48 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/08 18:21:27 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (end > start && ft_check_char(s1[end - 1], set))
 		end--;
-	str = (char *)malloc(end - start + 1 * sizeof(char));
+	str = (char *)malloc((end - start + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	ft_strlcpy(str, (s1 + start), end - start + 1);
