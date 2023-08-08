@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:11:17 by namoreir          #+#    #+#             */
-/*   Updated: 2023/08/07 19:08:16 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/08 17:17:05 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_list
  * 
  * @param c a int
  * @return Int '1' for true or int '0' for false.
- * */ 
+ * */
 int		ft_isalpha(int c);
 
 /**@brief Checks if the int 'c' is a digit character from the ASCII table.
