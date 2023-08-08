@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:11:17 by namoreir          #+#    #+#             */
-/*   Updated: 2023/08/08 17:17:05 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/08 19:49:30 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -386,7 +386,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
  * The memory of 'next' must not be freed.
  * 
  * @param lst the node to free
- * @param del 'he address of the function used to delete the content
+ * @param del 'he address of the function used to delete the content.
 */
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
@@ -410,10 +410,9 @@ the list.
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**@brief Iterates the list 'lst' and applies the function
-'f' on the content of each node. Creates a new
-list resulting of the successive applications of
-the function 'f'. The 'del' function is used to
-delete the content of a node if needed.
+ * 'f' on the content of each node. Creates a new list resulting of 
+ * the successive applications of the function 'f'.
+ * The 'del' function is used to delete the content of a node if needed.
 
  * @param lst the address of a pointer to a node.
  * @param f  the address of the function used to iterate on
