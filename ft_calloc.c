@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 19:29:15 by namoreir          #+#    #+#             */
-/*   Updated: 2023/08/08 20:07:16 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/09 14:31:59 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*alloc_mem;
 	size_t	total_size;
 
-	total_size = nmemb * size;
-	if (total_size == 0)
+	if (nmemb == 0 || size == 0)
 		return (malloc(0));
-	if (total_size > __INT_MAX__ || total_size / size != nmemb)
+	total_size = nmemb * size;
+	if (total_size / size != nmemb)
 		return (NULL);
 	alloc_mem = malloc(total_size);
 	if (!alloc_mem)
