@@ -6,7 +6,7 @@
 #    By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/08 19:54:46 by namoreir          #+#    #+#              #
-#    Updated: 2023/08/08 19:57:05 by namoreir         ###   ########.fr        #
+#    Updated: 2023/08/10 11:52:32 by namoreir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,7 @@ bonus: $(OBJECTS_B)
 
 %.o:%.c $(INCLUDES)
 	${CC} ${FLAGS} -c $< -o $@
-	ar -rcs $(NAME) $@
+	ar rc $(NAME) $@
 
 clean:
 	$(RM) $(OBJECTS) $(OBJECTS_B)
@@ -88,6 +88,4 @@ fclean: clean
 
 re: fclean all
 
-rebonus: fclean bonus
-
-.PHONY:	all clean fclean re bonus rebonus
+.PHONY:	all clean fclean re bonus
