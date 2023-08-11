@@ -6,7 +6,7 @@
 /*   By: namoreir <namoreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 14:59:44 by namoreir          #+#    #+#             */
-/*   Updated: 2023/07/27 17:10:33 by namoreir         ###   ########.fr       */
+/*   Updated: 2023/08/10 13:04:23 by namoreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		i;
+	int	i;
 
 	if (!s || !f)
 		return ;
