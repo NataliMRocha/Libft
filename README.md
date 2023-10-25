@@ -1,6 +1,6 @@
 # :books: Libft | 42 SP
 - Actual Status : finished.
-- Result        : evaluation in progress.
+- Result        : Result : Approved with 125 points by moulinette (the 42 tester) ✅
 
 The libft (42 Library) is the first project in the software engineering curriculum at 42 São Paulo. The objective of the project is to create your first C library by re-creating functions from the standard C library. During the project, you will learn how these functions work, how to implement them, and how to use each one. To submit the project, you must create a Makefile that compiles your library without relinking.
 
